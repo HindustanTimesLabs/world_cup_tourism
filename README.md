@@ -1,4 +1,44 @@
-This repo contains the data and code for a story I did on football World Cups and their impact on tourism. You can read the story [here](https://shijithpk.github.io/world_cup_tourism/index.html).
+This repo contains the data and code for a story I did on football World Cups and their impact on tourism. You can read an expanded version of the story [here](https://shijithpk.github.io/world_cup_tourism/index.html).
+
+Didn't have space to put this graphic in the print edition. If you read the text, it refers to a table of parameters on which Brazil and South Africa do worse than France, Japan and Germany. Here's the table:
+
+![alt text](https://i.imgur.com/gmLznJ9.png)
+
+
+All the text below is there in the expanded version, putting it here too for the sake of posterity.
+
+**METHODOLOGY / HOW WE DID THE MATH**
+
+So how were the hypothetical countries in the story created? They were constructed using a method called ‘synthetic control’. This is a method is typically used by academics and analysts for ‘impact evaluation’, ie. assessing whether a government policy or program has had any effect or not.
+
+Now to figure out if hosting the World Cup leads to an increase or decrease in tourist spending, we need some kind of a counterfactual. Meaning, a way to let us know what would happen to the tourism figures of a country if it hadn’t hosted the World Cup.
+
+Synthetic control helps us in constructing this counterfactual case, something that we can compare the actual figures to and make an assessment of how well a country has done.
+
+We do this by constructing a synthetic country whose tourist spending figures are similar to that of the World Cup host country. This synthetic country is a weighted combination of countries similar to the host country.
+
+To construct this synthetic case, we’ve chosen neighbouring countries whose citizens are, on average, as wealthy as the average person in the host country, ie. their per capita income levels aren’t that far apart.
+
+(Typically, they’re in the same income group of countries as classified by the World Bank. Because South Africa just had two neighbours in the same income group, we relaxed the rule in this case to give us more countries to use. The reasoning was that the other countries would be similar enough to South Africa in several other respects to make up for not being in the same income group.)
+
+This table below shows us the various countries that have been used to form the synthetic case for the past five world cups in this analysis:
+
+![alt text](https://i.imgur.com/rAIhGVE.png)
+
+For example, for Brazil, we constructed a ‘synthetic Brazil’ whose tourist spending figures are similar to that of the actual Brazil for three years prior to the World Cup in 2014, ie. 2011, 2012 and 2013. These three years represent a period of normalcy for the host country, a period before the World Cup has had an effect on tourist spending figures.
+
+In this analysis, Synthetic Brazil is combination of five countries viz. Ecuador, Colombia, Paraguay, Venezuela and Peru. We would have chosen Argentina too if it hadn’t hosted the South American international football tournament, the Copa America in 2011. Because it hosted that tournament, its tourist spending figures for that year would have been higher than usual and skewed the figures for Synthetic Brazil.
+
+(In fact, while selecting the countries used for constructing the synthetic case, it’s important to select countries that haven’t been through a ‘shock’ such as hosting a major tournament such as the Olympics or World Cup.)
+
+So we take the tourist spending figures for the five South American countries for 2011, 2012 and 2013, find weightages/multipliers that we can apply to each of the countries, so that when the figures are added up, we get something close to the figures of actual Brazil.
+
+![alt text](https://i.imgur.com/eHHxGCt.png)
+
+We arrive at the weightages/multipliers to be used for each country by doing something called ‘constrained optimisation’ .
+
+We then apply these weightages/multipliers to the tourist spending figures for these five countries for the years 2014 to 2016 and so arrive at the figures of Synthetic Brazil. By doing this, we get an idea of what the counterfactual would be, what the figures for Brazil would have looked like for all those years if it hadn’t hosted the World Cup.
+
 
 **CREDITS & FURTHER READING**
 
